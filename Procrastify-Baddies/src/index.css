@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-color: #0f1d33; /* A dark, navy-like color */
+  color: #c9d1d9; /* A soft white for text, good for dark backgrounds */
+}

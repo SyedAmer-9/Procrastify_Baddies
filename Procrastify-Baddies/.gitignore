@@ -1,0 +1,27 @@
+# Dependencies
+# This folder can be huge and is installed by anyone who clones your project.
+/node_modules
+
+# Vite build output
+# This is the optimized, production-ready code that Vite builds for you.
+/dist
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+# This file often contains secret keys and API credentials.
+.env.local
+.env.*.local
+.env
+# IDE and OS-specific files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
