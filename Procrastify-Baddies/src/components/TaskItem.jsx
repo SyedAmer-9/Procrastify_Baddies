@@ -6,6 +6,7 @@ export default function TaskItem({task,deleteTask,toggleComplete}) {
         
         <input
             type='checkbox'
+            
             checked = {task.completed}
             className = 'mr-w h-5 w-5'
             onChange={()=>toggleComplete(task._id)}
