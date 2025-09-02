@@ -1,5 +1,6 @@
 // 1. Unnecessary imports (Login, Register) are removed.
 import { useState, useEffect, useMemo, useContext } from "react";
+import { useAuth } from "../context/AuthContext";
 import { ThemeContext } from "../context/ThemeContext";
 import TaskForm from '../components/TaskForm';
 import TaskList from '../components/TaskList';
@@ -41,7 +42,7 @@ function TodoPage() {
 
 const handleLogout = ()=>{
     logoutContext();
-    Navigate('/login');
+    navigate('/login');
 }
   const handleSubmitTask = async (e) => {
     e.preventDefault();

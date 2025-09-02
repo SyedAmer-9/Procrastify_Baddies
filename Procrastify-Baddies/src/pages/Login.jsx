@@ -1,21 +1,29 @@
 import { useState } from 'react';
 import { login } from '../services/api.js'; // 1. Import login
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const { login: loginContext } = useAuth(); 
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('The loginContext function is:', loginContext);
     setError('');
     try {
       const userData = { email, password };
       const data = await login(userData); // 2. Call login
-      
+          loginContext(data.token); 
+
       console.log('Login successful, token:', data.token);
       alert('Login successful!');
       // We will save the token and redirect in the next step
+          navigate('/'); 
+
 
     } catch (err) {
       setError(err.message);

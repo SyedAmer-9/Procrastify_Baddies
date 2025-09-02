@@ -8,7 +8,7 @@ export default function TaskItem({task,deleteTask,toggleComplete}) {
             type='checkbox'
             checked = {task.completed}
             className = 'mr-w h-5 w-5'
-            onChange={()=>toggleComplete(task.id)}
+            onChange={()=>toggleComplete(task._id)}
         />
 
         <span className={task.completed ? 'line-through text-gray-500':''}>
@@ -17,7 +17,7 @@ export default function TaskItem({task,deleteTask,toggleComplete}) {
 
         <button 
             className="px-2 py-1 bg-red-600 text-white rounded-md text-sm hover:bg-red-700"
-            onClick={()=>deleteTask(task.id)}
+            onClick={()=>deleteTask(task._id)}
         >Delete</button>
     </li>
   )
