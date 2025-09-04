@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { register } from "../services/api";
+import { Link } from 'react-router-dom';
+
+
 function Register(){
     const [username,setUsername]=useState('');
     const [email,setEmail]=useState('');
@@ -66,6 +69,11 @@ function Register(){
       Register
     </button>
       </form>
+      <p className="mt-4 text-center text-gray-600 dark:text-gray-400">
+        Already have an Account?{' '}
+        <Link to ='/login' className="text-blue-500 hover:underline" >
+        Login</Link>
+      </p>
     </div>
   );
 }
